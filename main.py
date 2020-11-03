@@ -10,3 +10,19 @@ print(r.getcode())
 data = r.read()
 jsonData = json.loads(data)
 print(jsonData)
+"""Looping through jsonData to display setup and punchline"""
+
+
+class Joke:
+    def __init__(self, setup, punchline) -> None:
+        self.setup = setup
+        self.punchline = punchline
+
+
+jokes = []
+
+for j in jsonData:
+    setup = j["setup"]
+    punchline = j[punchline]
+    joke = Joke(setup, punchline)
+    jokes.append(joke)
