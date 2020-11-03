@@ -2,6 +2,7 @@ from urllib import request
 import json
 import pyttsx3
 
+
 """Making API call and working with json objects for random jokes. 
 Removal of s in http deters use of SSL certification"""
 url = "http://official-joke-api.appspot.com/random_ten"
@@ -37,3 +38,6 @@ print(f"Got {len(jokes)}jokes")
 
 for joke in jokes:
     print(joke)
+
+"""Turn the text into speech"""
+pyttsx3.speak("DeeIdowu")
