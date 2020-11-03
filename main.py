@@ -23,7 +23,7 @@ class Joke:
         self.punchline = punchline
 
     def __str__(self) -> str:
-        return f"setup{self.setup} punchline{self.punchline}"
+        return f"setup {self.setup} punchline {self.punchline}"
 
 
 jokes = []
@@ -38,6 +38,7 @@ print(f"Got {len(jokes)}jokes")
 
 for joke in jokes:
     print(joke)
-
-"""Turn the text into speech"""
-pyttsx3.speak("DeeIdowu")
+    pyttsx3.speak("Setup")
+    pyttsx3.speak(joke.setup)
+    pyttsx3.speak("The Punchline")
+    pyttsx3.speak(joke.punchline)
