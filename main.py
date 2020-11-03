@@ -20,6 +20,9 @@ class Joke:
         self.setup = setup
         self.punchline = punchline
 
+    def __str__(self) -> str:
+        return f"setup{self.setup} punchline{self.punchline}"
+
 
 jokes = []
 
@@ -28,3 +31,8 @@ for j in jsonData:
     punchline = j["punchline"]
     joke = Joke(setup, punchline)
     jokes.append(joke)
+
+print(f"Got {len(jokes)}jokes")
+
+for joke in jokes:
+    print(joke)
