@@ -1,5 +1,6 @@
 from urllib import request
 import json
+import pyttsx3
 
 """Making API call and working with json objects for random jokes. 
 Removal of s in http deters use of SSL certification"""
