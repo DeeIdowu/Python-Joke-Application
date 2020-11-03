@@ -10,6 +10,8 @@ print(r.getcode())
 data = r.read()
 jsonData = json.loads(data)
 print(jsonData)
+
+
 """Looping through jsonData to display setup and punchline"""
 
 
@@ -23,6 +25,6 @@ jokes = []
 
 for j in jsonData:
     setup = j["setup"]
-    punchline = j[punchline]
+    punchline = j["punchline"]
     joke = Joke(setup, punchline)
     jokes.append(joke)
